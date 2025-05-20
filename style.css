@@ -1,3 +1,56 @@
- .hidden {
-      display: none;
-    }
+body {
+  background: linear-gradient(to bottom right, #313e52, #e0e7ff);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tarjeta {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #fff;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-opcion {
+  margin-bottom: 0.75rem;
+  background-color: #6366f1;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+}
+
+.btn-opcion:hover {
+  background-color: #4f46e5;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+
+.btn-primary {
+  background-color: #10b981;
+  border: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #059669;
+  transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
