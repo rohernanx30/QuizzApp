@@ -1,4 +1,3 @@
-
 //pdt Rocio: Idea de la estructura que creo que debe llevar, a quien le corresponda esta parte puede ver si le parece
 //y seguir la idea o modificar todo a su gusto
 const cuestionarios = {
@@ -219,13 +218,13 @@ function mostrarPregunta() {
 
 function siguientePregunta() {
 	if (opcionSeleccionada === null) {
-		Swal.fire({
+		Swal.fire({//Alerta en dado caso no se haya seleccionado una respuesta
 			icon: "warning",
-      background:'#000000',
-      color:'#f27900',
+			background: "#000000",
+			color: "#f27900",
 			title: "No has seleccionado respuesta",
 			text: "¡Selecciona una respuesta para continuar con el test!",
-      showConfirmButton: false,
+			showConfirmButton: false,
 		});
 		return;
 	}
@@ -235,10 +234,12 @@ function siguientePregunta() {
 		cuestionarios[temaActual].preguntas[preguntaActual].respuesta
 	) {
 		puntuacion++;
-		const Toast = Swal.mixin({
+		const Toast = Swal.mixin({//Mensaje para el caso en donde la respuesta seleccionada es la correcta
 			width: "150px",
-      background:'000000',
+			background: "000000",
+			color:"#ffffff",
 			position: "center",
+			text:"¡Respuesta correcta!",
 			showConfirmButton: false,
 			timer: 1000,
 			didOpen: (toast) => {
@@ -249,12 +250,14 @@ function siguientePregunta() {
 		Toast.fire({
 			icon: "success",
 		});
-	}
-  else{
-    const Toast = Swal.mixin({
+	} else {
+		//Mensaje para el caso en donde la respuesta seleccionada es la incorrecta
+		const Toast = Swal.mixin({
 			width: "150px",
-      background:'000000',
+			background: "000000",
 			position: "center",
+			color:"#ffffff",
+			text:"¡Respuesta incorrecta!",
 			showConfirmButton: false,
 			timer: 1000,
 			didOpen: (toast) => {
@@ -265,8 +268,7 @@ function siguientePregunta() {
 		Toast.fire({
 			icon: "error",
 		});
-
-  }
+	}
 
 	opcionSeleccionada = null;
 	preguntaActual++;
