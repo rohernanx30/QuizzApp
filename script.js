@@ -235,9 +235,9 @@ function siguientePregunta() {
 	) {
 		puntuacion++;
 		const Toast = Swal.mixin({//Mensaje para el caso en donde la respuesta seleccionada es la correcta
-			width: "150px",
-			background: "000000",
-			color:"#ffffff",
+			width: "200px",
+			background: "#ffffff",
+			color:"#000000",
 			position: "center",
 			text:"¡Respuesta correcta!",
 			showConfirmButton: false,
@@ -253,10 +253,9 @@ function siguientePregunta() {
 	} else {
 		//Mensaje para el caso en donde la respuesta seleccionada es la incorrecta
 		const Toast = Swal.mixin({
-			width: "150px",
-			background: "000000",
-			position: "center",
-			color:"#ffffff",
+			width: "200px",
+			background: "#ffffff",
+			color:"#000000",
 			text:"¡Respuesta incorrecta!",
 			showConfirmButton: false,
 			timer: 1000,
