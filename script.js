@@ -1,5 +1,4 @@
-//pdt Rocio: Idea de la estructura que creo que debe llevar, a quien le corresponda esta parte puede ver si le parece
-//y seguir la idea o modificar todo a su gusto
+
 const cuestionarios = {
 	// Preguntas de HTML (1 al 10)
 	html: {
@@ -346,12 +345,20 @@ function mostrarPregunta() {
 	const contenedor = document.getElementById("contenedor-opciones");
 	contenedor.innerHTML = "";
 
-	pregunta.opciones.forEach((texto, indice) => {
+	// Mezclar opciones y mantener el índice de la respuesta correcta
+	const opcionesOriginales = pregunta.opciones.map((texto, indice) => ({
+		texto,
+		esCorrecta: indice === pregunta.respuesta
+	}));
+
+	const opcionesMezcladas = opcionesOriginales.sort(() => Math.random() - 0.5);
+
+	opcionesMezcladas.forEach((opcion, indice) => {
 		const boton = document.createElement("button");
 		boton.className = "btn btn-opcion w-100";
-		boton.textContent = texto;
+		boton.textContent = opcion.texto;
 		boton.onclick = () => {
-			opcionSeleccionada = indice;
+			opcionSeleccionada = opcion.esCorrecta ? "correcta" : "incorrecta";
 			document
 				.querySelectorAll("#contenedor-opciones button")
 				.forEach((b) => b.classList.remove("active"));
@@ -360,6 +367,7 @@ function mostrarPregunta() {
 		contenedor.appendChild(boton);
 	});
 }
+
 
 function siguientePregunta() {
 	if (opcionSeleccionada === null) {
@@ -370,13 +378,14 @@ function siguientePregunta() {
 			title: "No has seleccionado respuesta",
 			text: "¡Selecciona una respuesta para continuar con el test!",
 			showConfirmButton: false,
+			timer: 3000,
 		});
 		return;
 	}
 
 	if (
-		opcionSeleccionada ===
-		cuestionarios[temaActual].preguntas[preguntaActual].respuesta
+		opcionSeleccionada === "correcta"
+
 	) {
 		puntuacion++;
 		const Toast = Swal.mixin({//Mensaje para el caso en donde la respuesta seleccionada es la correcta
