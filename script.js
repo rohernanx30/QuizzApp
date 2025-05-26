@@ -35,17 +35,16 @@ const cuestionarios = {
 	js: {
 		nombre: "JavaScript",
 		preguntas: [
-      		{pregunta: "¿Cómo se declara una variable?",opciones: ["let x;", "var x;", "const x;", "Todas las anteriores"],respuesta: 3, },
-        	{pregunta: "¿Qué palabra clave se usa para definir una función?",opciones: ["function", "def", "func", "method"],respuesta: 0,},
-        	{pregunta: "¿Cuál es el resultado de typeof '123'?",opciones: ["string", "number", "NaN", "undefined"],respuesta: 0,},
-        	{pregunta: "¿Qué método convierte un JSON string en un objeto?",opciones: ["JSON.parse()", "JSON.stringify()", "Object.parse()", "Stringify.JSON()"],respuesta: 0,},
-        	{pregunta: "¿Qué operador compara valor y tipo?",opciones: ["===", "==", "=", "!=="],respuesta: 0,},
-        	{pregunta: "¿Cómo se llama la función que se ejecuta cuando termina una operación asíncrona?",opciones: ["callback", "async", "await", "function"],respuesta: 0,},
-        	{pregunta: "¿Cuál de estos NO es un bucle en JavaScript?",opciones: ["loop", "for", "while", "do...while"],respuesta: 0,},
-        	{pregunta: "¿Qué evento se dispara cuando se envía un formulario?",opciones: ["submit", "change", "click", "input"],respuesta: 0,},
-        	{pregunta: "¿Qué propiedad devuelve el número de elementos en un array?",opciones: ["length", "size", "count", "index"],respuesta: 0,},
-        	{pregunta: "¿Para qué se usa el método .map() en arrays?",
-            opciones: ["Crear un nuevo array transformando los elementos","Eliminar elementos del array","Ordenar el array","Filtrar elementos"],respuesta: 0,}
+      			{pregunta: "¿Cómo se declara una variable?",opciones: ["let x;", "var x;", "const x;", "Todas las anteriores"],respuesta: 3, },
+        		{pregunta: "¿Qué palabra clave se usa para definir una función?",opciones: ["function", "def", "func", "method"],respuesta: 0,},
+        		{pregunta: "¿Cuál es el resultado de typeof '123'?",opciones: ["string", "number", "NaN", "undefined"],respuesta: 0,},
+        		{pregunta: "¿Qué método convierte un JSON string en un objeto?",opciones: ["JSON.parse()", "JSON.stringify()", "Object.parse()", "Stringify.JSON()"],respuesta: 0,},
+        		{pregunta: "¿Qué operador compara valor y tipo?",opciones: ["===", "==", "=", "!=="],respuesta: 0,},
+        		{pregunta: "¿Cómo se llama la función que se ejecuta cuando termina una operación asíncrona?",opciones: ["callback", "async", "await", "function"],respuesta: 0,},
+        		{pregunta: "¿Cuál de estos NO es un bucle en JavaScript?",opciones: ["loop", "for", "while", "do...while"],respuesta: 0,},
+        		{pregunta: "¿Qué evento se dispara cuando se envía un formulario?",opciones: ["submit", "change", "click", "input"],respuesta: 0,},
+        		{pregunta: "¿Qué propiedad devuelve el número de elementos en un array?",opciones: ["length", "size", "count", "index"],respuesta: 0,},
+        		{pregunta: "¿Para qué se usa el método .map() en arrays?", opciones: ["Crear un nuevo array transformando los elementos","Eliminar elementos del array","Ordenar el array","Filtrar elementos"],respuesta: 0,}
 		],
 	},
 	//10 preguntas de la opcion de accesibilidad
@@ -53,16 +52,15 @@ const cuestionarios = {
 		nombre: "Accesibilidad",
 		preguntas: [
 			{pregunta: "¿Qué ratio cumple WCAG 2.1 nivel AA?",opciones: ["4.5:1", "3:1", "2.5:1", "5:1"],respuesta: 0,},
-        	{pregunta: "¿Qué significa ARIA?",opciones: ["Accessible Rich Internet Applications","Application for Rich Interfaces","Accessible Real Internet Apps","All Responsive Interfaces"],respuesta: 0,},
-        	{pregunta: "¿Para qué se usa la propiedad aria-label?",opciones: ["Proporcionar una etiqueta accesible a un elemento","Cambiar el color del texto","Ocultar contenido visualmente","Definir un título alternativo"],respuesta: 0,},
-        	{pregunta: "¿Qué debe tener siempre una imagen para ser accesible?",opciones: ["Texto alternativo (alt)", "Un borde visible", "Una descripción larga", "Un tamaño fijo"],respuesta: 0,},
-        	{pregunta: "¿Cuál es uno de los principios fundamentales de la accesibilidad según WCAG?",opciones: ["Perceptible","Visible","Dinámico","Animado"],respuesta: 0,},
-        	{pregunta: "¿Qué herramienta permite navegar por una página web sin usar el ratón?",opciones: ["Teclado","Touchpad","Ratón óptico","Pantalla táctil"],respuesta: 0,},
-        	{pregunta: "¿Qué indica el orden de tabulación (tabindex) en una página web?",
-            opciones: ["El orden en que se enfocan los elementos con Tab","El tamaño de fuente","La posición en pantalla","La visibilidad del elemento"],respuesta: 0,},
-        	{pregunta: "¿Cuál de estas tecnologías ayuda a usuarios con discapacidad visual a navegar por páginas web?",opciones: ["Lector de pantalla","Zoom del navegador","Modo oscuro","Estilo CSS personalizado"],respuesta: 0,},
-        	{pregunta: "¿Qué significa hacer un sitio web 'navegable por teclado'?",opciones: ["Que se puede usar completamente sin mouse","Que tiene atajos de teclado personalizados","Que no requiere scroll","Que solo funciona con comandos de voz"],respuesta: 0,},
-        	{pregunta: "¿Qué se debe evitar para mejorar la accesibilidad del contenido?",opciones: ["Usar solo color para transmitir información","Incluir imágenes","Usar encabezados","Escribir en mayúsculas todo el texto"],respuesta: 0,}
+        		{pregunta: "¿Qué significa ARIA?",opciones: ["Accessible Rich Internet Applications","Application for Rich Interfaces","Accessible Real Internet Apps","All Responsive Interfaces"],respuesta: 0,},
+        		{pregunta: "¿Para qué se usa la propiedad aria-label?",opciones: ["Proporcionar una etiqueta accesible a un elemento","Cambiar el color del texto","Ocultar contenido visualmente","Definir un título alternativo"],respuesta: 0,},
+        		{pregunta: "¿Qué debe tener siempre una imagen para ser accesible?",opciones: ["Texto alternativo (alt)", "Un borde visible", "Una descripción larga", "Un tamaño fijo"],respuesta: 0,},
+        		{pregunta: "¿Cuál es uno de los principios fundamentales de la accesibilidad según WCAG?",opciones: ["Perceptible","Visible","Dinámico","Animado"],respuesta: 0,},
+        		{pregunta: "¿Qué herramienta permite navegar por una página web sin usar el ratón?",opciones: ["Teclado","Touchpad","Ratón óptico","Pantalla táctil"],respuesta: 0,},
+        		{pregunta: "¿Qué indica el orden de tabulación (tabindex) en una página web?", opciones: ["El orden en que se enfocan los elementos con Tab","El tamaño de fuente","La posición en pantalla","La visibilidad del elemento"],respuesta: 0,},
+        		{pregunta: "¿Cuál de estas tecnologías ayuda a usuarios con discapacidad visual a navegar por páginas web?",opciones: ["Lector de pantalla","Zoom del navegador","Modo oscuro","Estilo CSS personalizado"],respuesta: 0,},
+        		{pregunta: "¿Qué significa hacer un sitio web 'navegable por teclado'?",opciones: ["Que se puede usar completamente sin mouse","Que tiene atajos de teclado personalizados","Que no requiere scroll","Que solo funciona con comandos de voz"],respuesta: 0,},
+        		{pregunta: "¿Qué se debe evitar para mejorar la accesibilidad del contenido?",opciones: ["Usar solo color para transmitir información","Incluir imágenes","Usar encabezados","Escribir en mayúsculas todo el texto"],respuesta: 0,}
 		],
 	},
 };
